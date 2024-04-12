@@ -1,0 +1,79 @@
+*{
+    font-family: 'Roboto';
+}
+
+
+body {
+    margin: 0px;
+}
+
+/***** Header *****/
+
+header{
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    width: 197px;
+    height: 36px;
+    padding: 15px;
+}
+
+/**** Location ***/
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #EAEAEA;
+    box-shadow: 0px 4px 5px 0px #bdbcbc,
+    inset 0px 2px 5px #bdbcbc;
+    .txt{
+        font-size: 16px;
+    }
+    .marker{
+        color: #353535;
+        padding-right: 15px;
+    }
+}
+
+/**** Card Restaurants ****/
+
+.section3 {
+    background-color: #EAEAEA;
+}
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    box-sizing: border-box;
+    img {
+        border-radius: 15px 15px 0px 0px ;
+        object-fit: cover;
+        width: 100%;
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 4px;
+
+    }
+    .txt{
+        font-size: 17px;
+        font-weight: 300;
+        margin: 0px;
+    }
+}
+
+
+
+/***** Footer ****/
+
+.logo2 {
+    width: 139px;
+    height: 27px;
+}
