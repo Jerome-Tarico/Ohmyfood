@@ -1,0 +1,37 @@
+.divanim {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    
+    
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.divanim {
+    animation: slideUp 1s ease-in-out forwards;
+}
+.divanim:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+
+.divanim:last-child {
+    transition-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation: slideUp 1s ease-in-out forwards, restore-scrolling 0s 2s forwards;
+}
+@keyframes restore-scrolling {
+    to {
+        overflow-y: auto;
+    }
+}

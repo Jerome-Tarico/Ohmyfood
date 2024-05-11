@@ -1,0 +1,44 @@
+.card-restaurant {
+    position: relative;
+    height: 70px;
+    
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 59px;
+    height: 70px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: rgba(153, 226, 208, 1);
+    opacity: 0;
+    transition: right 250ms ease, opacity 250ms ease; 
+    cursor: pointer; 
+}
+
+
+.card-restaurant:hover .checkbox {
+    right: 0px; 
+    opacity: 1;
+}
+
+
+.card-restaurant span {
+    transition: margin-right 250ms ease;
+}
+
+
+.card-restaurant:hover span {
+    margin-right: 60px; 
+}
+
+
+.fa-circle-check {
+    font-size: 21px;
+    color: #ffff;
+}

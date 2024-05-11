@@ -1,0 +1,87 @@
+.test {
+    position: absolute;
+    z-index: 2;
+    right: -48.5px;
+    top: 0px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.test2 {
+    @extend .test;
+    right: 40px;
+    top: 205px;
+}
+
+/* Cacher la case à cocher */
+.checkbox-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Styliser le label pour ressembler à l'élément */
+.heart-label {
+    display: inline-block;
+    position: relative;
+}
+
+/* Styling du "faux" checkmark */
+.heart-label:before {
+    content: "\2714"; /* Unicode pour un checkmark */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    color: transparent; /* Le rend invisible */
+}
+
+/* Styles appliqués lorsque la case à cocher est cochée */
+#heartCheckbox:checked + .heart-label,
+#heartCheckbox2:checked + .heart-label2,
+#heartCheckbox3:checked + .heart-label3,
+#heartCheckbox4:checked + .heart-label4,
+#heartCheckbox5:checked + .heart-label5 {
+    position: relative;
+    font-size: 29px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background-clip: text; 
+    color: transparent; 
+    animation: fillHeart 350ms forwards ease-in-out; 
+}
+
+#heartCheckbox:checked + .heart-label {
+    right: -53.5px;
+    top: 0px;
+}
+
+#heartCheckbox2:checked + .heart-label2,
+#heartCheckbox4:checked + .heart-label4,
+#heartCheckbox3:checked + .heart-label3,
+#heartCheckbox5:checked + .heart-label5  {
+
+    left: 40px;
+    bottom: 30px;
+        
+}
+
+
+@keyframes fillHeart {
+    0% {
+        clip-path: inset(100% 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0); 
+    }
+}
+
+
+@keyframes fillHeart {
+    0% {
+        clip-path: inset(100% 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0); 
+    }
+}

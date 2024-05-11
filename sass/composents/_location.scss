@@ -1,0 +1,17 @@
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #EAEAEA;
+    box-shadow: 0px 4px 5px 0px #bdbcbc,
+    inset 0px 2px 5px #bdbcbc;
+    position: relative;
+    .txt{
+        font-size: 16px;
+    }
+    .marker{
+        color: #353535;
+        padding-right: 15px;
+    }
+}

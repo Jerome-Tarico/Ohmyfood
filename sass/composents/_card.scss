@@ -1,32 +1,41 @@
 .card {
+    position: relative;
     background-color: #fff;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     margin: 0px 0px 20px 0px;
-    box-sizing: border-box;
+    
+    @media only screen and (min-width: 768px) {
+        width: 500px;
+        margin-top: 20px;
+    }
     img {
         border-radius: 15px 15px 0px 0px ;
         object-fit: cover;
         width: 100%;
         height: 185px;
+        
     }
     .bla{
         display: flex;
     }
     
     .content {
+        position: relative;
         display: flex;
         flex-direction: column;
-        padding: 0px 0px 10px 10px;
+        padding: 13px 0px 16px 16px;
+        gap: 5px;
         .title {
+            
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
             font-size: 18px;
             font-weight: 700;
             margin-top: 0px;
-            margin-bottom: 4px;
+            margin-bottom: 0px;
     
         }
         .txt{
@@ -38,10 +47,13 @@
        
     }
     .icon{
-        font-size: 22px;
+        font-size: 26px;
         margin-right: 25px;
         margin-top: 15px;
-        box-sizing: content-box;
+        position: absolute;
+        z-index: 1;
+        right: 12px;
+        top: 189px;
     }
     
 }
@@ -54,10 +66,56 @@
     border-radius: 2px;
     width: 80px;
     height: 29px;
-    margin: 15px 0px 0px 240px;
+    margin: 15px 20px 0px 0px;
     background-color: aquamarine;
     color: #008766;
     font-size: 14px;
     font-weight: 500;
+    right: 3px;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-restaurant {
+    @extend .card;
+    box-shadow: 0px 4px 11px 0px #bdbcbc;
+    padding: 10px;
+    height: 50px;
+    &:hover p {
+        max-width: 200px;
+    }
+
+    @media  only  screen and (min-width:768px) {
+        
+        &:hover p {
+            max-width: 2000px;
+        }
+        
+    }
+   
+    h3 {
+        margin : 0px;
+       
+    }
+    p {
+        margin-top: 5px;
+        margin-bottom: -18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 605px;
+        transition: max-width 0.5s ease;
+        
+        
+    }
+    span {      
+        display: flex;
+        justify-content: flex-end;
+        color: #353535;
+        font-weight: 700;
+    }
 }
 
