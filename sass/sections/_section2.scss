@@ -12,6 +12,7 @@
         padding: 10px;
         gap: 20px;
         list-style-type:none ;
+        cursor: pointer;
         @media only screen and (min-width:768px) {
             flex-direction: row;
             justify-content: space-between;
@@ -36,10 +37,6 @@
             padding-right: 15px;
            
         }
-        .purple {
-              color: #9356DC;
-            }
-            
         li{
             display: flex;
             align-items: center;
@@ -49,6 +46,9 @@
             border-radius: 20px;
             font-size: 1.2rem;
             font-weight: 500;
+            &:hover .fa-solid {
+                color: #9356DC;
+            }
             @media only screen and (min-width:768px) {
                 width: 33%;
 
