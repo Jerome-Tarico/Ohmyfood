@@ -413,7 +413,7 @@ header a {
   margin: 0px;
   margin-top: -5px;
 }
-.card .icon, .card-restaurant .icon {
+.card .icon, .card-restaurant .icon, .card .icon2, .card-restaurant .icon2 {
   font-size: 26px;
   margin-right: 25px;
   margin-top: 15px;
@@ -421,6 +421,13 @@ header a {
   z-index: 1;
   right: 5px;
   top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .icon2 {
+    position: relative;
+    right: -57px;
+  }
 }
 
 .new {
@@ -449,16 +456,19 @@ header a {
   padding: 10px;
   height: 50px;
 }
-.card-restaurant:hover p {
+.card-restaurant:hover p, .card-restaurant:hover h3 {
   max-width: 200px;
 }
-@media only screen and (min-width: 768px) {
-  .card-restaurant:hover p {
-    max-width: 2000px;
+@media only screen and (min-width: 450px) {
+  .card-restaurant:hover p, .card-restaurant:hover h3 {
+    max-width: 100%;
   }
 }
 .card-restaurant h3 {
   margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card-restaurant p {
   margin-top: 5px;
@@ -466,8 +476,14 @@ header a {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  width: 150px;
   max-width: 605px;
   transition: max-width 0.5s ease;
+}
+@media only screen and (min-width: 450px) {
+  .card-restaurant p {
+    width: 100%;
+  }
 }
 .card-restaurant span {
   display: flex;
@@ -635,14 +651,6 @@ ul i {
   animation: fillHeart 350ms forwards ease-in-out;
 }
 
-@keyframes fillHeart {
-  0% {
-    clip-path: inset(100% 0 0 0);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
-}
 @keyframes fillHeart {
   0% {
     clip-path: inset(100% 0 0 0);

@@ -33,13 +33,3 @@
         clip-path: inset(0 0 0 0); 
     }
 }
-
-
-@keyframes fillHeart {
-    0% {
-        clip-path: inset(100% 0 0 0);
-    }
-    100% {
-        clip-path: inset(0 0 0 0); 
-    }
-}
