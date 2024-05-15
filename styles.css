@@ -378,8 +378,13 @@ header a {
 }
 @media only screen and (min-width: 768px) {
   .card, .card-restaurant {
-    width: 500px;
+    width: 380px;
     margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .card, .card-restaurant {
+    width: 500px;
   }
 }
 .card img, .card-restaurant img {
@@ -423,13 +428,10 @@ header a {
   top: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-  .icon2 {
-    position: relative;
-    right: -57px;
-  }
+.icon2 {
+  position: relative;
+  right: -54px;
 }
-
 .new {
   display: flex;
   align-items: center;
@@ -597,9 +599,6 @@ ul i {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .greybackground h1 a {
   margin-right: 25px;
@@ -634,6 +633,26 @@ ul i {
   font-size: 20px;
   color: #fff;
   cursor: pointer;
+}
+
+.test3 {
+  position: relative;
+  z-index: 2;
+  right: -24px;
+  top: -3px;
+  font-size: 20px;
+  color: #f1f0f0;
+  cursor: pointer;
+}
+.test3:hover::before {
+  position: relative;
+  right: 4.5px;
+  top: 3px;
+  font-size: 29px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  color: transparent;
+  animation: fillHeart 350ms forwards ease-in-out;
 }
 
 .test2 {

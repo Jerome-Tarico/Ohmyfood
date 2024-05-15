@@ -7,8 +7,11 @@
     margin: 0px 0px 20px 0px;
     
     @media only screen and (min-width: 768px) {
-        width: 500px;
+        width: 380px;
         margin-top: 20px;
+    }
+    @media only screen and (min-width: 1050px) {
+        width: 500px;
     }
     img {
         border-radius: 15px 15px 0px 0px ;
@@ -60,9 +63,10 @@
 
 .icon2 {
     @extend .icon;
-    @media  only  screen and (min-width:768px) {
     position: relative;
-    right: -57px;
+    right: -54px;
+    @media  only  screen and (min-width:768px) {
+    
 }
 }
 

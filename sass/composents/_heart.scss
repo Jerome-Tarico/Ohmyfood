@@ -8,6 +8,27 @@
     cursor: pointer;
     
 }
+.test3 {
+    position: relative;
+    z-index: 2;
+    right: -24px;
+    top: -3px;
+    font-size: 20px;
+    color: #f1f0f0;
+    cursor: pointer;
+    
+    &:hover::before {
+        position: relative;
+    right: 4.5px;
+    top: 3px;
+    font-size: 29px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background-clip: text; 
+    color: transparent; 
+    animation: fillHeart 350ms forwards ease-in-out; 
+}
+    
+}
 
 .test2 {
     @extend .test;
