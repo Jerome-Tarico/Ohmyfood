@@ -13,6 +13,9 @@
     @media only screen and (min-width: 1050px) {
         width: 500px;
     }
+    @media only screen and (min-width: 1440px) {
+        width: 100%;
+    }
     img {
         border-radius: 15px 15px 0px 0px ;
         object-fit: cover;
@@ -101,6 +104,9 @@
         @media  only  screen and (min-width:450px) {
             max-width: 100%;
         }
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 500px;
     }
    
    

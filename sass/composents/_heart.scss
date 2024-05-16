@@ -3,7 +3,7 @@
     z-index: 2;
     right: -48.5px;
     top: 0px;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     cursor: pointer;
     
@@ -18,7 +18,7 @@
     cursor: pointer;
     
     &:hover::before {
-        position: relative;
+    position: relative;
     right: 4.5px;
     top: 3px;
     font-size: 29px;
@@ -32,10 +32,10 @@
 
 .test2 {
     @extend .test;
-    right: 33px;
-    top: 17px;
+    right: 34px;
+    top: 19px;
     &:hover::before {
-        position: relative;
+    position: relative;
     right: -5px;
     top: -3px;
     font-size: 29px;
