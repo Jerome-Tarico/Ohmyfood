@@ -12,6 +12,9 @@ body {
 h1 {
   margin-bottom: 0px;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 a {
@@ -438,7 +441,7 @@ header a {
 
 .icon2 {
   position: relative;
-  right: -54px;
+  right: -35px;
 }
 .new {
   display: flex;
@@ -655,7 +658,7 @@ ul i {
 .test3 {
   position: relative;
   z-index: 2;
-  right: -24px;
+  right: -5px;
   top: -3px;
   font-size: 20px;
   color: #f1f0f0;
