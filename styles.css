@@ -1,0 +1,702 @@
+/***** Base ****/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  position: absolute;
+  justify-self: flex-start;
+  font-size: 19px;
+  color: #353535;
+  padding: 15px;
+}
+
+.logo {
+  width: 197px;
+  height: 36px;
+  padding: 15px;
+}
+
+/***** Animations *****/
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.spring {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  overflow: visible;
+}
+
+.bubble {
+  background: rgba(255, 255, 255, 0.4);
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  border-radius: 50%;
+  animation: bubbleUp 1s infinite ease-in-out;
+}
+
+.bubble1 {
+  left: 10px;
+  animation-delay: 0s;
+}
+
+.bubble2 {
+  width: 12px;
+  height: 12px;
+  left: 0px;
+  animation-delay: 300ms;
+}
+
+.bubble3 {
+  left: -10px;
+  top: -10px;
+  animation-delay: 600ms;
+}
+
+.bubble4 {
+  width: 28px;
+  height: 28px;
+  left: 5px;
+  animation-delay: 900ms;
+  animation-duration: 1.5s;
+}
+
+.bubble5 {
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+  animation-delay: 1200ms;
+  animation-duration: 1.2s;
+}
+
+.loader {
+  animation: loaderDisappear 3s forwards;
+}
+
+.scrolling {
+  animation: scrolling 5s forwards;
+}
+
+@keyframes bubbleUp {
+  0% {
+    top: 200px;
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    top: 50px;
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  93% {
+    top: -30px;
+    transform: scale(1);
+    opacity: 1;
+  }
+  99% {
+    top: -36px;
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    top: 100px;
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes loaderDisappear {
+  0% {
+    opacity: 1;
+    overflow: hidden;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    overflow: visible;
+  }
+}
+@keyframes scrolling {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+.divanim {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.divanim {
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+.divanim:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+.divanim:last-child {
+  transition-delay: 1s;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation: slideUp 1s ease-in-out forwards, restore-scrolling 0s 2s forwards;
+}
+
+@keyframes restore-scrolling {
+  to {
+    overflow-y: auto;
+  }
+}
+.card-restaurant {
+  position: relative;
+  height: 70px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 59px;
+  height: 70px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: rgb(153, 226, 208);
+  opacity: 0;
+  transition: right 250ms ease, opacity 250ms ease;
+  cursor: pointer;
+}
+
+.card-restaurant:hover .checkbox {
+  right: 0px;
+  opacity: 1;
+}
+
+.card-restaurant span {
+  transition: margin-right 250ms ease;
+}
+
+.card-restaurant:hover span {
+  margin-right: 60px;
+}
+
+.fa-circle-check {
+  font-size: 21px;
+  color: white;
+}
+
+/***** Sections *****/
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(241, 240, 240, 0.831372549);
+  padding: 20px 45px 50px 45px;
+}
+@media only screen and (min-width: 768px) {
+  .section1 h1 {
+    font-weight: 700;
+    font-size: 40px;
+  }
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 5px 25px 20px;
+}
+@media only screen and (min-width: 1250px) {
+  .section2 {
+    padding: 50px 180px 50px 180px;
+  }
+}
+.section2 ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  list-style-type: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .section2 ul {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+.section2 ul span {
+  position: relative;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+  margin-right: 5px;
+}
+.section2 ul i {
+  color: #7E7E7E;
+  padding-right: 15px;
+}
+.section2 ul li {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  background-color: rgba(241, 240, 240, 0.831372549);
+  filter: drop-shadow(-1px 8px 5px rgba(0, 0, 0, 0.3));
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.section2 ul li:hover .fa-solid {
+  color: #9356DC;
+}
+@media only screen and (min-width: 768px) {
+  .section2 ul li {
+    width: 33%;
+  }
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(241, 240, 240, 0.831372549);
+  padding: 20px;
+}
+@media only screen and (min-width: 1250px) {
+  .section3 {
+    padding: 50px 180px 50px 180px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section3 .div {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+}
+.section3 h3 {
+  margin-top: 10PX;
+}
+.section3 .div a {
+  width: 100%;
+}
+
+/***** Composents *****/
+.btn, .newbtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  background-image: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 35px;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  width: 218px;
+  height: 50px;
+  align-self: center;
+  transition: opacity 500ms, box-shadow 500ms;
+}
+.btn:hover, .newbtn:hover {
+  opacity: 0.85;
+  box-shadow: 0px 4px 9px 5px rgba(0, 0, 0, 0.25);
+}
+
+.newbtn {
+  margin: 25px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .newbtn {
+    margin: 30px 0px 60px;
+  }
+}
+
+.card, .card-restaurant {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 20px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .card, .card-restaurant {
+    width: 380px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .card, .card-restaurant {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .card, .card-restaurant {
+    width: 100%;
+  }
+}
+.card img, .card-restaurant img {
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  width: 100%;
+  height: 185px;
+}
+.card .bla, .card-restaurant .bla {
+  display: flex;
+}
+.card .content, .card-restaurant .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 13px 0px 16px 16px;
+  gap: 5px;
+}
+.card .content .title, .card-restaurant .content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.card .content .txt, .card-restaurant .content .txt {
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0px;
+  margin-top: -5px;
+}
+.card .icon, .card-restaurant .icon, .card .icon2, .card-restaurant .icon2 {
+  font-size: 26px;
+  margin-right: 25px;
+  margin-top: 15px;
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  top: 0px;
+}
+
+.icon2 {
+  position: relative;
+  right: -35px;
+}
+.new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  margin: 15px 20px 0px 0px;
+  background-color: aquamarine;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  right: 3px;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-restaurant {
+  box-shadow: 0px 4px 11px 0px #bdbcbc;
+  padding: 10px;
+  height: 50px;
+  cursor: pointer;
+}
+.card-restaurant:hover p, .card-restaurant:hover h3 {
+  max-width: 200px;
+}
+@media only screen and (min-width: 450px) {
+  .card-restaurant:hover p, .card-restaurant:hover h3 {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .card-restaurant {
+    width: 500px;
+  }
+}
+.card-restaurant h3 {
+  margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.card-restaurant p {
+  margin-top: 5px;
+  margin-bottom: -18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 150px;
+  max-width: 605px;
+  transition: max-width 0.5s ease;
+}
+@media only screen and (min-width: 450px) {
+  .card-restaurant p {
+    width: 100%;
+  }
+}
+.card-restaurant span {
+  display: flex;
+  justify-content: flex-end;
+  color: #353535;
+  font-weight: 700;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #EAEAEA;
+  box-shadow: 0px 4px 5px 0px #bdbcbc, inset 0px 2px 5px #bdbcbc;
+  position: relative;
+}
+.location .txt {
+  font-size: 16px;
+}
+.location .marker {
+  color: #353535;
+  padding-right: 15px;
+}
+
+/***** Footer *****/
+.logo2 {
+  padding: 20px 0px 0px 20px;
+  width: 125px;
+  height: 20px;
+  filter: invert(100%);
+}
+@media only screen and (min-width: 768px) {
+  .logo2 {
+    padding: 15px 25px 0px 50px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: #fff;
+  position: relative;
+  top: 0px;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding: 30px 25px 30px 25px;
+    position: relative;
+  }
+}
+footer ul li {
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px 0px 0px 20px;
+  gap: 10px;
+}
+@media only screen and (min-width: 768px) {
+  ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+ul i {
+  padding-right: 4px;
+}
+
+.footer {
+  position: initial;
+}
+
+/***** Restaurants *****/
+.photo img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.greybackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f1f0f0;
+  border-radius: 20px 20px 0px 0px;
+  padding: 25px;
+  position: relative;
+  margin-top: -4rem;
+  left: 0px;
+  right: 0px;
+}
+@media only screen and (min-width: 768px) {
+  .greybackground {
+    width: 80%;
+    align-items: center;
+    top: 36px;
+    left: 4rem;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .greybackground {
+    left: 7rem;
+  }
+}
+.greybackground h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 27px;
+}
+.greybackground h1 a {
+  margin-right: 25px;
+}
+@media only screen and (min-width: 768px) {
+  .greybackground h1 a {
+    margin-right: 0px;
+    margin-left: 25px;
+  }
+}
+.greybackground h2 {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+.greybackground h2:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  bottom: 0;
+  left: 2px;
+  border-bottom: 3px solid #99e2d0;
+}
+
+.test, .test2 {
+  position: absolute;
+  z-index: 2;
+  right: -48.5px;
+  top: 0px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.test3 {
+  position: relative;
+  z-index: 2;
+  right: -5px;
+  top: -3px;
+  font-size: 20px;
+  color: #f1f0f0;
+  cursor: pointer;
+}
+.test3:hover::before {
+  position: relative;
+  right: 4.5px;
+  top: 3px;
+  font-size: 29px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  color: transparent;
+  animation: fillHeart 150ms forwards ease-in-out;
+}
+
+.test2 {
+  right: 34px;
+  top: 19px;
+}
+.test2:hover::before {
+  position: relative;
+  right: -6px;
+  top: -6px;
+  font-size: 29px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  color: transparent;
+  animation: fillHeart 150ms forwards ease-in-out;
+}
+
+@keyframes fillHeart {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
